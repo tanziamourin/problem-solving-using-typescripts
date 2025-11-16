@@ -16,6 +16,16 @@ function formatValue (value: string| number| boolean) :  string | number| boolea
 
 // problem -- 2
 
+function getLength(value:string | any[]): number{
+    if (typeof value === "string") {
+        return value.length;
+    }
+    if (Array.isArray(value)) {
+        return value.length;
+    }
+    return value;
+}
+
 
 // problem -- 3
 // problem -- 4
