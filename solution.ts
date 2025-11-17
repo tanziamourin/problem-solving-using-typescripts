@@ -88,6 +88,34 @@ function printBookDetails (book : Book) : void {
 
 // problem -- 7
 
+function getUniqueValues (array1 : (string | number) [] , array2 : (string | number) []) {
 
+    const result : (string | number)[] = [] ;
+    function exists ( value : string | number ) : boolean {
+        for (let index = 0; index < result.length; index++) {
+            if (result[index] === value) {
+                return true ;
+            }
+            
+        }
+        return false ;
+    }
+
+
+    for (let index = 0; index < array1.length; index++) {
+       if ( !exists (array1[index])) {
+        result.push(array1[index]) ;
+       } ;
+        
+    }
+
+     for (let index = 0; index < array2.length; index++) {
+       if ( !exists (array2[index])) {
+        result.push(array2[index]) ;
+       } ;
+        
+    }
+    return result ;
+}
 
 // problem -- 8
