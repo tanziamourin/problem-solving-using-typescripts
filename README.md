@@ -1,4 +1,6 @@
- ## TypeScript-এ `keyof` কীওয়ার্ডের ব্যবহার (সহ উদাহরণ)
+### TypeScript-এ `keyof` কীওয়ার্ডের ব্যবহার (সহ উদাহরণ)?
+
+### What are some differences between interfaces and types in TypeScript?
 
 TypeScript আমাদের কোডকে আরো নিরাপদ এবং টাইপ-চেকড করতে সহায়তা করে। এর মধ্যে একটি গুরুত্বপূর্ণ ফিচার হচ্ছে `keyof`। এটি একটি অপারেটর যা একটি অবজেক্টের সমস্ত **key**-এর ইউনিয়ন টাইপ তৈরি করে।
 
@@ -27,9 +29,9 @@ type UserKeys = keyof User;   -->
 
 
 
+### TypeScript-এ `enum` কী এবং এটি কিভাবে কাজ করে?
 
-
-
+### What is the use of `enums` in TypeScript? Provide an example of a numeric and string enum.? 
 
 TypeScript-এ enum (enumeration) হলো একটি শক্তিশালী ফিচার যা বিভিন্ন নামকৃত কনস্ট্যান্টের একটি সেট তৈরি করে। এটি কোডের readability, maintainability এবং error-reduction এর দিক থেকে গুরুত্বপূর্ণ ভূমিকা পালন করে, বিশেষত যখন আপনার কোডে নির্দিষ্ট কিছু স্থির মান ব্যবহৃত হয়।
 
