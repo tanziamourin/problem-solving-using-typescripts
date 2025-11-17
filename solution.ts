@@ -43,6 +43,23 @@ class Person {
 
 
 // problem -- 4
+
+interface BookItem {
+    title :  string ;
+    rating : number ;
+}
+function filterByRating (bookItems : BookItem[]): BookItem[]{
+    return bookItems.filter(i => i.rating >= 4);
+
+}
+const books = [
+  { title: 'Book A', rating: 4.5 },
+  { title: 'Book B', rating: 3.2 },
+  { title: 'Book C', rating: 5.0 },
+];
+
+console.log(filterByRating(books));
+
 // problem -- 5
 // problem -- 6
 // problem -- 7
