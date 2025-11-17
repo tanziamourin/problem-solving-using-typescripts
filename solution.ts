@@ -119,3 +119,23 @@ function getUniqueValues (array1 : (string | number) [] , array2 : (string | num
 }
 
 // problem -- 8
+
+type Product = {
+    name : string ;
+    price : number ;
+    quantity : number ;
+    discount ? : number ;
+};
+function calculateTotalPrice  (products : Product []) : number {
+    if (products.length === 0) {
+        return 0;
+    }
+    return products 
+    .map ((product) => {
+        const total = product.price * product.quantity;
+        return product.discount !== undefined ? total - ( total * product.discount)/100 : total ;
+    })
+    .reduce((sum, productTotal) => sum + productTotal, 0);
+}
+
+
