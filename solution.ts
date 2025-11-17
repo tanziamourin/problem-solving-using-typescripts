@@ -1,4 +1,4 @@
-// problem -- 1
+
 
 function formatValue (value: string| number| boolean) :  string | number| boolean {
     if(typeof value === "string"){
@@ -11,10 +11,9 @@ function formatValue (value: string| number| boolean) :  string | number| boolea
         return  !value;
     }
     return value
-
 }
 
-// problem -- 2
+
 
 function getLength(value:string | any[]): number{
     if (typeof value === "string") {
@@ -27,7 +26,7 @@ function getLength(value:string | any[]): number{
 }
 
 
-// problem -- 3
+
 class Person {
     name: string;
     age: number;
@@ -42,7 +41,7 @@ class Person {
 }
 
 
-// problem -- 4
+
 
 interface BookItem {
     title :  string ;
@@ -50,7 +49,6 @@ interface BookItem {
 }
 function filterByRating (books : BookItem[]): BookItem[]{
     return books.filter(book => book.rating >= 4);
-
 }
 const books = [
   { title: 'Book A', rating: 4.5 },
@@ -59,7 +57,7 @@ const books = [
 ];
 
 
-// problem -- 5
+
  interface User {
     id : number ;
     name : string ;
@@ -72,7 +70,6 @@ const books = [
 
 
 
-// problem -- 6
 
 interface Book {
     title : string ;
@@ -86,39 +83,32 @@ function printBookDetails (book : Book) : void {
 }
 
 
-// problem -- 7
+
 
 function getUniqueValues (array1 : (string | number) [] , array2 : (string | number) []) {
-
     const result : (string | number)[] = [] ;
     function exists ( value : string | number ) : boolean {
         for (let index = 0; index < result.length; index++) {
             if (result[index] === value) {
                 return true ;
-            }
-            
+            } 
         }
         return false ;
     }
-
-
     for (let index = 0; index < array1.length; index++) {
        if ( !exists (array1[index])) {
         result.push(array1[index]) ;
-       } ;
-        
+       } ; 
     }
-
      for (let index = 0; index < array2.length; index++) {
        if ( !exists (array2[index])) {
         result.push(array2[index]) ;
-       } ;
-        
+       } ; 
     }
     return result ;
 }
 
-// problem -- 8
+
 
 type Product = {
     name : string ;
