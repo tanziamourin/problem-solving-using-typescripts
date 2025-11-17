@@ -37,7 +37,7 @@ class Person {
         this.age = age;
     }
     getDetails(){
-        return `Name : ${this.name} ,  Age : ${this.age}`;
+        return `'Name : ${this.name} ,  Age : ${this.age}'`;
     }
 }
 
@@ -70,14 +70,24 @@ const books = [
     return users.filter(user => user.isActive === true);
  }
 
-const users = [
-  { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
-  { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
-  { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
-];
- 
 
 
 // problem -- 6
+
+interface Book {
+    title : string ;
+    author : string ;
+    publishedYear :  number ;
+    isAvailable : boolean ;
+}
+function printBookDetails (book : Book) : void {
+    const availability = book.isAvailable ? "yes" : " no" ;
+    console.log(`Title : ${book.title} , Author : ${book.author} , Published : ${book.publishedYear}` ) ;
+}
+
+
 // problem -- 7
+
+
+
 // problem -- 8
