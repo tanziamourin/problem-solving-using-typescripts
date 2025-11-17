@@ -37,7 +37,7 @@ class Person {
         this.age = age;
     }
     getDetails(){
-        return `Name : ${this.name} ,  Age : ${this.age}`
+        return `Name : ${this.name} ,  Age : ${this.age}`;
     }
 }
 
@@ -48,8 +48,8 @@ interface BookItem {
     title :  string ;
     rating : number ;
 }
-function filterByRating (bookItems : BookItem[]): BookItem[]{
-    return bookItems.filter(i => i.rating >= 4);
+function filterByRating (books : BookItem[]): BookItem[]{
+    return books.filter(book => book.rating >= 4);
 
 }
 const books = [
@@ -58,9 +58,26 @@ const books = [
   { title: 'Book C', rating: 5.0 },
 ];
 
-console.log(filterByRating(books));
 
 // problem -- 5
+ interface User {
+    id : number ;
+    name : string ;
+    email : string ;
+    isActive : boolean ;
+ }
+ function filterActiveUsers (users : User[] ): User[]{
+    return users.filter(user => user.isActive === true);
+ }
+
+const users = [
+  { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
+  { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
+  { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
+];
+ 
+
+
 // problem -- 6
 // problem -- 7
 // problem -- 8
