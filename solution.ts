@@ -87,8 +87,9 @@ function printBookDetails (book : Book) : void {
 
 function getUniqueValues (array1 : (string | number) [] , array2 : (string | number) []) {
     const result : (string | number)[] = [] ;
+    let resultIndex = 0 ;
     function exists ( value : string | number ) : boolean {
-        for (let index = 0; index < result.length; index++) {
+        for (let index = 0; index < resultIndex; index++) {
             if (result[index] === value) {
                 return true ;
             } 
@@ -97,12 +98,14 @@ function getUniqueValues (array1 : (string | number) [] , array2 : (string | num
     }
     for (let index = 0; index < array1.length; index++) {
        if ( !exists (array1[index])) {
-        result.push(array1[index]) ;
+        result[resultIndex] = array1[index];
+        resultIndex++ ;
        } ; 
     }
      for (let index = 0; index < array2.length; index++) {
        if ( !exists (array2[index])) {
-        result.push(array2[index]) ;
+        result[resultIndex] = array2[index];
+        resultIndex++ ;
        } ; 
     }
     return result ;
